@@ -1,6 +1,6 @@
 # 运行验收
 
-状态：1.0.0 首发包主流程已通过；未执行对外发布。维护角色：插件维护者。最近核验：2026-10-29。
+状态：1.0.0 首发包主流程已通过，源码与预编译产物已公开推送，GitHub 安装与 CI 已验证；尚未创建 Release。维护角色：插件维护者。最近核验：2026-10-29。
 
 ## README 文档重排（2026-10-29）
 
@@ -21,6 +21,12 @@
 本地构建通过，连续两次构建的 33 个产物逐文件 SHA-256 一致；65 项单元测试通过，文档检查通过 23 篇、176 个本地链接。`npm pack --dry-run --json --ignore-scripts` 的 39 个条目包含前后端入口、类型声明、补丁与双语 README，不包含源码或测试产物。官方安装规格解析器接受上述地址为 Git 类型，安装元数据无本地运行依赖或安装时构建钩子。
 
 本轮未提交、推送、运行线上 Actions 或公开 GitHub 安装。以上是本地分发准备检查，不代表公开 GitHub 命令的下载、安装与加载已经实测；首次推送后需要在隔离 Web profile 补验。
+
+## 公开仓库上传与安装验证（2026-10-29）
+
+首个公开提交为 `43cce43513e4594c146e99fb2c688ec33ec97dd7`，目标为 `KKUCODES/deepseek-harness-predictions` 的 `main`。[首次 Actions](https://github.com/KKUCODES/deepseek-harness-predictions/actions/runs/40845696825)全部通过，包括干净环境安装依赖、Linux 重建核对、65 项单元测试与安装包上传。
+
+本地使用官方 DSH `0.2.1-rc.3` CLI，在项目 `artifacts/github-install/run-mY9QkK/home` 隔离 profile 实际执行 `plugin --profile web add github:KKUCODES/deepseek-harness-predictions`，成功安装 `1.0.0`，核对前后端入口、服务端声明与补丁文件存在。报告保存在该运行目录的 `report.json`，安装日志为 `install.log`；均不随仓库提交。未使用日常 DSH_HOME、厂商 Key 或模型请求。该项验证公开仓库下载与安装入口，不冒充重新完成全部浏览器 UI 和模型验收。
 
 ## 官方 Web 复现入口
 

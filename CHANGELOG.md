@@ -5,7 +5,7 @@
 - 自动预测在助手正常回复后直接触发，每轮只生成一次；不设置触发等待或跨轮调用间隔，失败不自动重试。
 
 - 重做中英文 README，接入用户录制的中文／英文演示动图，删除截图占位，补充兼容表、安装与打包入口。
-- 对齐 DSHM 电脑插件的 GitHub 安装方式：仓库携带预编译 `lib/`，使用 `github:KKUCODES/deepseek-harness-predictions` 安装；Actions 重建校验并打包。尚未推送及验证公开仓库安装。
+- 对齐 DSHM 电脑插件的 GitHub 安装方式：仓库携带预编译 `lib/`，使用 `github:KKUCODES/deepseek-harness-predictions` 安装；Actions 重建校验并打包，公开仓库安装已通过隔离 Web profile 验证。
 
 ## 1.0.0 · 首个正式版本
 
