@@ -1,0 +1,7 @@
+node_modules/
+# lib/ 随源码提交，供 GitHub 安装直接加载；CI 重新构建核对。
+artifacts/
+.runtime/
+test-results/
+playwright-report/
+*.tsbuildinfo
